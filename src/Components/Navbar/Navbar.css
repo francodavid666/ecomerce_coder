@@ -1,0 +1,12 @@
+header{
+    display: flex;
+    color: rgb(197, 84, 8);
+}
+
+img{
+    width: 30%;
+}
+
+a{
+    margin: 10px
+}

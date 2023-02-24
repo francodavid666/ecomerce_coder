@@ -1,0 +1,7 @@
+Componenetes Funcionales
+
+- Importar React(Opcional)
+- Debe teneruna funcion
+- El nombre de la funcion debe empezar con mayusculas SIEMPRE
+- La funcion debe retornar algo
+- Se debe exportar la funcion
