@@ -5,3 +5,34 @@ Componenetes Funcionales
 - El nombre de la funcion debe empezar con mayusculas SIEMPRE
 - La funcion debe retornar algo
 - Se debe exportar la funcion
+
+
+
+Componenetes
+
+Componentes 
+Los Componenetes se suelen dividir entre Componenetes de clases 
+Componenetes de funciones (de js)
+
+todos los componentes de clases tienen:
+-Props
+-States
+-Ciclo de vida
+-Metodos del ciclo de vida
+
+Hooks
+-Siempre comienzan con use
+-Siempre se declaran dentro de un Componentes
+-Son funciones
+-No se pueden declarar en condicionales(if)
+
+
+Ciclo de vida de componentes y Metodos
+
+-Montaje (Mount)
+
+-Actualizacion(update)
+
+-Desmotaje(Unmount)
+
+clase en minuti 1:15:20

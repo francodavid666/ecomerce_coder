@@ -1,24 +1,58 @@
 import React from 'react';
 import './Navbar.css'
-import logo from '../../assets/logo.jpg'
+import castillo_logo from '../../img/castillo_logo.png';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
+                                                 //palabra reservada para obtener los props que ex  porto
+ const Navbar = ({nombreUsuario, apellidoUsuario,children})=>{
 
- const Navbar = ()=>{
-  return( 
-    <header>
+      return( 
+      <header style = {style.container}>
+        
+      
+  
+    <img src= {castillo_logo} style={style.logo}/>
+    <h1 style={style.titulo}>Bienvenido {nombreUsuario} {apellidoUsuario} </h1>
+   
+    {children}
+
+    </header>
+    );
+
+
     
-  <img src={logo} alt=''/>
-  <h1>Titulo de mi Pagina</h1>
-  <nav>
-    <a href="">Categoria 1</a>
-    <a href="">Categoria 2</a>
-    <a href="">Categoria 3</a>
-    <a href="">Categoria 4</a>
-  </nav>
-  <ShoppingCartIcon color="primary" />
-  </header>
-  );
-};
+
+  };
 
 export default Navbar
+
+
+const style = {
+
+  container:{
+    display: 'flex',
+    color:' rgb(197, 84, 8)',
+    backgroundColor: 'rgb(67, 67, 210)',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    height: 60,
+    width: '100%',
+    backgroundColor:'#0B2447',
+  },
+  logo:{
+    width: '5%',
+    marginLeft: 50,
+  },
+  categorias:{
+    margin: 10,
+    color:'red',
+  },
+titulo:{
+  color:'#A5D7E8',
+  fontSize: 20
+}
+
+}
+
+
+

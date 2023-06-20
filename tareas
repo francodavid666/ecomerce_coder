@@ -1,0 +1,4 @@
+Crea un componente CardWidget.js con un icono, y ubicalo en el navbar.
+
+Crea un component contenedor IemListCointainer.js con una prop greeting, y muestra el mensaje dentro del contenedor con el styling integrado
+
