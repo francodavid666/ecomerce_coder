@@ -1,0 +1,7 @@
+.imgs{
+    transition: 0.3s;
+}
+
+.imgs:hover{
+    filter: saturate(200%)
+}

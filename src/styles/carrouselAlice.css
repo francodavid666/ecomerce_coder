@@ -1,0 +1,96 @@
+.card{
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  align-content: start;
+  align-items: start;
+}
+
+.imgCard{
+  background-color: red;
+  margin: 10px;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+
+.contenidoCard{
+  background-color: rgb(255, 255, 255);
+  margin-left: 5px;
+
+
+}
+
+.tituloCard{
+  font-size: 18px;
+  background-color: rgb(255, 255, 255);
+  margin-top: 0px;
+}
+
+.precioCard{
+  font-size: 17px;
+  background-color: rgba(255, 255, 255, 0);
+  font-weight: 100;
+  margin-top: 10px;
+}
+
+.linkCard{
+  background-color: rgba(255, 255, 255, 0.76);
+  text-decoration: none;
+  color: black;
+  margin-top: 10px;
+}
+
+.iconCard{
+  background-color: rgb(255, 255, 255);
+  position:absolute;
+  left: 20%;
+  top:10%;
+  width: 40px;
+  padding: 5px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+/*.iconCard:hover{
+  background-color: red;
+  transition: 1s;
+}*/
+.iconCard:focus{
+  outline: none;
+}
+
+.like-button{
+  position:relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  top: -50px;
+  left: 140px;
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+  border-radius: 50px;
+  cursor: pointer;
+  outline: none;
+  font-size: 25px;
+  background-color: white;
+  border: none;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.4); 
+}
+
+
+
+
+
+/*<img src={corazon} class='iconCard'alt="" type='img/png' onClick={handleLike} />
+*/
+
+
+
+
+
+
+

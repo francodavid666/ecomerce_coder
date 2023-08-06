@@ -1,19 +1,23 @@
 import React from 'react';
+//son Link y Navlink son clases de boostrap
+import{Link, NavLink} from "react-router-dom"
 
 
 export const ComponenteCategorias = ()=>{
    
   const categorias=[
-    {nombre:'Categoria 1', id:0,  ruta:'#'},
-    {nombre:'Categoria 2', id:1,  ruta:'#'},
-    {nombre:'Categoria 3', id:2,  ruta:'#'},
-    {nombre:'Categoria 4', id:3,  ruta:'#'},
+    {nombre: "electronics", id:0,  ruta:'/categoria/electronics'},
+    {nombre: "jewelery", id:1,  ruta:'/categoria/ewelery'},
+    {nombre:"men's clothing", id:2,  ruta:'/categoria/jewelery'},
+    {nombre:"women's clothing", id:3,  ruta:"/categoria/women's clothing"},
   ];
+
+
 
 return(
     <nav>
     {categorias.map((categoria)=>{
-      return  <a style = {style.categorias}key={categoria.id}href={categoria.ruta}> {categoria.nombre}</a>
+      return  <NavLink style = {style.categorias}key={categoria.id} to={categoria.ruta}> {categoria.nombre}</NavLink>
     })}
   </nav>
 )
