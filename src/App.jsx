@@ -25,9 +25,14 @@ import { ComponenteBannerFooter } from './Components/BannerFooter/ComponenteBann
 const App = ()=>{
     const [show,setShow]= useState(true)
 
-    const alternar=()=>{
+    const alternarFalse=()=>{
       /*este setShow va a cambiar un estado y va a altenar al show*/
-      setShow(!show);
+      setShow(false);
+    }
+
+    const alternarTrue=()=>{
+      /*este setShow va a cambiar un estado y va a altenar al show*/
+      setShow(true);
     }
 
     const nombre = 'Luis';
@@ -38,44 +43,45 @@ const App = ()=>{
     }
     return ( 
     <>
-    <BrowserRouter>
-          <Navbar nombreUsuario = {nombre} apellidoUsuario = 'Fernandez'/>
+    <BrowserRouter >
+          <Navbar funcionFalse={alternarFalse} funcionTrue={alternarTrue}  nombreUsuario = {nombre} apellidoUsuario = 'Fernandez'/>
             <Routes>
-              <Route path='/category/:id' element ={<ProductsList/>} />
+              <Route path='/category/:id' element ={<ProductsList/>}  />
               <Route path='/category/products/:id' element={<ProductDetail/>}  /> 
   
             </Routes>
      
 
     </BrowserRouter> 
-             <body style={styles.body}>
+    { show?
+             <body style={styles.body} >
              <ComponenteBanner/>
              <ComponenteLogosMain/>
           
 
-        <section style={ styles.sectionTituloGaleria}>
-        <TituloGaleria/>
-        </section>
+            <section style={ styles.sectionTituloGaleria}>
+            <TituloGaleria/>
+            </section>
 
-        <section style={ styles.sectionGaleria}>
-        <Galeria/>
-        </section>
+            <section style={ styles.sectionGaleria}>
+            <Galeria/>
+            </section>
 
-        <section>
-          <ContainerVideo/>
-        </section>
+            <section>
+              <ContainerVideo/>
+            </section>
 
-       <FliperComponente/>
+            <FliperComponente/>
 
 
-<ImagenesBody/>
-      <DescripcionComponent/>
+              <ImagenesBody/>
+              <DescripcionComponent/>
 
 
 <footer>
 <ComponenteBannerFooter></ComponenteBannerFooter>
 </footer>
-          </body>
+          </body>:null }
     </>
     );
 

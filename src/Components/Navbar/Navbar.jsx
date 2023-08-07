@@ -19,14 +19,14 @@ const categorias=[
 //palabra reservada para obtener los props que ex  porto
 
 
- const Navbar = ({nombreUsuario, apellidoUsuario,children})=>{
+ const Navbar = ({children,funcionFalse,funcionTrue})=>{
 
   const fade = useSpring({from:{opacity:0}, opacity:1})
 
       return( 
     <header style = {style.container}>
     <Link to="/cart" style={style.link}>
-    <animated.img src= {logo} style={fade}  />
+    <animated.img src= {logo} style={fade}  onClick={funcionTrue}/>
     </Link>
      
 
@@ -35,7 +35,7 @@ const categorias=[
       return  (
         
         <ul class='menu-horizontal'>
-       <li> <NavLink  className='linkNav' style={style.categorias}key={categoria.id} to={categoria.ruta}> {categoria.nombre}  </NavLink> 
+       <li> <NavLink  onClick={funcionFalse} className='linkNav' style={style.categorias}key={categoria.id} to={categoria.ruta}> {categoria.nombre}  </NavLink> 
        </li>
        </ul>
       )

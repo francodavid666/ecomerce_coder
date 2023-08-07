@@ -1,6 +1,7 @@
 import React from "react";
 import {useEffect, useState} from 'react';
 import{Link, NavLink,useParams} from "react-router-dom"
+import { CardContainer } from "./cardProduct/cardContainer";
 
 
 
@@ -26,36 +27,32 @@ export const ProductDetail=()=>{
 
       return(
         <>
-   
-        <div className="card-product" style={styles.card_product}>
-         <h2>{id}</h2>
-                  <figure className="container-img" style={styles.container_img}>
-                     <img style={styles.container_img_img} src={product.image} alt={product.title} />
-                  </figure>
-                  <div styles={styles.info_product} className="info-product">
-                     <h3 styles={styles.info_product_h3} >{product.title}</h3>
-                     <Link to="/category/electronics1" element={ProductDetail}>
-                     <a>Ver mas</a>
-                     </Link>
-                     <p className="price" styles={styles.price}>${product.price}</p>
-                     <button style={styles.button}>Anadir al carrito</button>
-                     <h2>{product.id}</h2>
-                  </div>
-               </div>
-      
+         <div className="div-container" style={styles.divContainer}>
+            <CardContainer/>
+               
+                     <div styles={styles.info_product} className="info-product">
+                           <h3 styles={styles.info_product_h3} >{product.title}</h3>
+                           <Link to="/category/electronics1" element={ProductDetail}>
+                           <a>Ver mas</a>
+                           </Link>
+                           <p className="price" styles={styles.price}>${product.price}</p>
+                           <button style={styles.button}>Anadir al carrito</button>
+                     </div>
+               
+         </div>
         </>
       )
 
 }
 
 const styles = {
-    container_products:{
-       display: 'grid',
-   gridTemplateColumns: 'repeat(auto-fit, minmax(200px,1fr))',
-   margin: '20px',
- 
-   gap: '20px',
-    },
+   divContainer:{
+      backgroundColor:'red',
+      display:'flex',
+      alingItems:'center',
+      justifyContent:'center',
+   },
+   
     card_product:{
        flex: '25%',
        display: 'flex',
@@ -65,22 +62,10 @@ const styles = {
     
        borderRadius: '15px',
        border:'1px solid black' ,
-       height:'400px'
+       height:'400px',
+       
     },
-    container_img:{
-       flex: 1,
-       display:'flex',
-       width: '100%',
-       height: '60%',
-    
-    },
-    container_img_img:{
-       width: '100%',
-       height: '90%',
-       objectFit: 'contain',
-       borderRadius: '15px',
-      
-    },
+ 
  
     info_product:{
        display: 'flex',

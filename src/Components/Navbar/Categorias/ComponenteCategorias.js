@@ -3,7 +3,7 @@ import React from 'react';
 import{Link, NavLink} from "react-router-dom"
 
 
-export const ComponenteCategorias = ()=>{
+export const ComponenteCategorias = ({alternar})=>{
    
   const categorias=[
     {nombre: "electronics", id:0,  ruta:'/categoria/electronics'},
@@ -17,7 +17,7 @@ export const ComponenteCategorias = ()=>{
 return(
     <nav>
     {categorias.map((categoria)=>{
-      return  <NavLink style = {style.categorias}key={categoria.id} to={categoria.ruta}> {categoria.nombre}</NavLink>
+      return  <NavLink style = {style.categorias}key={categoria.id} to={categoria.ruta} onClick={alternar}> {categoria.nombre}</NavLink>
     })}
   </nav>
 )
